@@ -38,6 +38,8 @@
 			</div><!-- .navigation-top -->
 		<?php endif; ?>
 
+		<?php get_sidebar( 'header' ); ?>
+
 	</header><!-- #masthead -->
 
 	<?php
