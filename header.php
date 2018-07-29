@@ -39,7 +39,7 @@
 		<?php endif; ?>
 
 		<?php if ( has_nav_menu( 'header_secondary' ) ) : ?>
-			<div class="navigation-top">
+			<div class="navigation-top main-navigation">
 				<div class="wrap">
 				<?php
 				wp_nav_menu(
