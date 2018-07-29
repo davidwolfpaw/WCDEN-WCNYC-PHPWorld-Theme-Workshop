@@ -38,6 +38,23 @@
 			</div><!-- .navigation-top -->
 		<?php endif; ?>
 
+		<?php if ( has_nav_menu( 'header_secondary' ) ) : ?>
+			<div class="navigation-top">
+				<div class="wrap">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location'  => 'header_secondary',
+						'container'       => 'nav',
+						'container_class' => 'header-secondary-menu',
+						'depth'           => 1,
+					)
+				);
+				?>
+				</div><!-- .wrap -->
+			</div><!-- .navigation-top -->
+		<?php endif; ?>
+
 		<?php get_sidebar( 'header' ); ?>
 
 	</header><!-- #masthead -->

@@ -21,3 +21,9 @@ function denver_widgets_init() {
 		)
 	);
 }
+
+// Add Header Secondary Meu
+add_action( 'after_setup_theme', 'denver_after_setup_theme', 11 );
+function denver_after_setup_theme() {
+	register_nav_menu( 'header_secondary', __( 'Secondary Header Menu', 'denver' ) );
+}
