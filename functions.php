@@ -55,3 +55,40 @@ function denver_customize_register( WP_Customize_Manager $wp_customize ) {
 		)
 	);
 }
+
+// Adds Gutenberg Theme Support
+// https://wordpress.org/gutenberg/handbook/extensibility/theme-support/
+add_action( 'after_setup_theme', 'denver_setup_theme_supported_features' );
+function denver_setup_theme_supported_features() {
+	add_theme_support(
+		'editor-color-palette', array(
+			array(
+				'name'  => __( 'strong magenta', 'denver' ),
+				'slug'  => 'strong-magenta',
+				'color' => '#a156b4',
+			),
+			array(
+				'name'  => __( 'light grayish magenta', 'denver' ),
+				'slug'  => 'light-grayish-magenta',
+				'color' => '#d0a5db',
+			),
+			array(
+				'name'  => __( 'very light gray', 'denver' ),
+				'slug'  => 'very-light-gray',
+				'color' => '#eee',
+			),
+			array(
+				'name'  => __( 'very dark gray', 'denver' ),
+				'slug'  => 'very-dark-gray',
+				'color' => '#444',
+			),
+		)
+	);
+}
+
+
+// Add Gutenberg Wide Image Theme Support
+add_theme_support( 'align-wide' );
+
+// Add Gutenberg Block Style Theme Support
+add_theme_support( 'wp-block-styles' );
