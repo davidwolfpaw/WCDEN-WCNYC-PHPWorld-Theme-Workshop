@@ -51,13 +51,17 @@
 
 	<div class="entry-content">
 		<?php
-		/* translators: %s: Name of current post */
-		the_content(
-			sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
-				get_the_title()
-			)
-		);
+		if ( ( is_archive() || is_home() ) && get_theme_mod( 'show_excerpts_in_archives' ) ) {
+				the_excerpt();
+		} else {
+			/* translators: %s: Name of current post */
+			the_content(
+				sprintf(
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),
+					get_the_title()
+				)
+			);
+		}
 
 		wp_link_pages(
 			array(
