@@ -1,5 +1,8 @@
 # WordCamp Denver 2018 Theme Building Workshop
 
+## How to use this repo
+Follow along with the [first commit](https://github.com/davidwolfpaw/WordCamp-Denver-Theme-Workshop/commits/master) at the bottom of the page, and move your way up through the commits. Each one is a step in the process of learning general theme making concepts including starting a child theme, adding a widget area, a new menu, changing styling, and adding customizer and Gutenberg settings.
+
 ## Theming Resources
 
 - **Theme Handbook** - https://developer.wordpress.org/themes/getting-started/
